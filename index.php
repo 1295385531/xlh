@@ -13,7 +13,7 @@
         <!-- 学生登入-->
         <div class="container__form container--signup">
             <!-- <form action="#" class="form" id="form1" method="POST"> -->
-            <form action="#" class="form"  method="POST">
+            <form action="stuindexcheck.php" class="form"  method="POST">
                 <h2 class="form__title">学生登入</h2>
                 <input type="text" placeholder="User" class="input" name="stuuser"/>
                 <input type="password" placeholder="Password" class="input" name="stupwd" />
