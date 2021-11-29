@@ -1,0 +1,68 @@
+
+* {
+    margin:5px 0 5px 0;
+/*	设置列表间距*/
+    padding: 0;
+    box-sizing: border-box;
+}
+em,
+i {
+    font-style: normal;
+}
+
+li {
+	display: block;
+    list-style: none;
+	align-content: center;
+	text-align: center;
+/*	这里列表文字居中*/
+}
+
+img {
+    border: 0;  /*ie6*/
+    vertical-align: middle;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+
+    text-decoration: none;
+}
+ul{
+	list-style-type: none;
+}
+
+
+button,
+input {
+    font-family: 'Microsoft YaHei', 'Heiti SC', tahoma, arial, 'Hiragino Sans GB', \\5B8B\4F53, sans-serif;
+    border: 0;
+    outline: none;
+}
+
+body {
+    background-color: #fff;
+    font: 12px/1.5 'Microsoft YaHei', 'Heiti SC', tahoma, arial, 'Hiragino Sans GB', \\5B8B\4F53, sans-serif;
+    color: #666
+}
+
+.hide,
+.none {
+    display: none;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: ".";
+    height: 0;
+}
+
+.clearfix {
+    *zoom: 1
+}
+

@@ -13,12 +13,16 @@
 
 
 	if($row['glyusername']==$glyusername&& $row['glypwd']==$glypwd){
-		//echo "登入 成功!!! 欢迎 ".$row['username'];
+	
 		echo "<script language='javascript'>alert('登入成功！');</script>";
-		echo '<meta http-equiv="refresh"content="1;url=shouye.php">';//页面跳转
+print <<<EOT
+		<meta http-equiv="refresh"content="1;url=glyshouye.php?glyusername=$glyusername">
+EOT;
+		//header("location:glyshouye.php?glyusername={$glyusername}");// 参数跳转 
 	
 	}else{
 		echo "<script language='javascript'>alert('登入失败！请重新登入！');</script>";
 		echo '<meta http-equiv="refresh"content="1;url=index.php">';//页面跳转
 	}
+
 ?>

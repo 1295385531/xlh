@@ -1,9 +1,10 @@
 <?php
 		$glyusername = $_POST['glyuser'];
         $glypwd = $_POST['glypwd'];
+		$glyxingming = $_POST['glyxingming'];
         include("connect.php");
 
-	$zhuceresult = mysqli_query($con,"insert into admin(glyusername,glypwd) values('$glyusername','$glypwd')");
+	$zhuceresult = mysqli_query($con,"insert into admin(glyusername,glypwd,glyxingming) values('$glyusername','$glypwd','$glyxingming')");
 
 	// if (!$result) {  
 	// 	printf("Error: %s\n", mysqli_error($con));

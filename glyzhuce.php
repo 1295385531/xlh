@@ -15,6 +15,7 @@
                 <h2 class="form__title">管理员注册</h2>
                 <input type="text" placeholder="User" class="input"  name="glyuser"/>
                 <input type="password" placeholder="Password" class="input"  name="glypwd"/>
+                <input type="text" placeholder="姓名" class="input"  name="glyxingming"/>
                 <input type="submit" class="btn" value="注 册">
                 <input class="btn" type="button" value="返 回" onclick="window.location.href='index.php'"/>
             </form>
