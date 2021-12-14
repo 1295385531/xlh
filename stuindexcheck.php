@@ -10,9 +10,8 @@
 	
 	//数据库报错
 	$row = mysqli_fetch_array($result);
-
 	
-	$rs=mysqli_query($con,"select * from student");
+	$rs=mysqli_query($con,"select * from studentuser where stuuser = '$stuuser' and stupwd ='$stupwd'");
 	$s=mysqli_fetch_row($rs);
     $xuehao=$s[0];
 

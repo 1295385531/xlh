@@ -39,10 +39,9 @@ $glyusername=$_REQUEST["glyusername"];
                 <li><a href="glystudentmanage.php?glyusername=<?php echo $glyusername ?>" class="icon-2"><span>学生管理</span></a></li>
                 <li><a href="glyshenqing.php?glyusername=<?php echo $glyusername ?>" class="icon-3"><span>申请管理</span></a></li>
                 <li><a href="allshenqing.php?glyusername=<?php echo $glyusername ?>" class="icon-4"><span>申请记录</span></a></li>
-                <li><a href="/bookmanagement/department/findAllDepartment" class="icon-6"><span>xxxx</span></a></li>
-                <li><a href="/bookmanagement/admin/findAllStudentFineInfo" class="icon-7"><span>xxxx</span></a></li>
-                <li><a href="/bookmanagement/adminpage/givenotice.jsp"  class="icon-8"><span>xxxx</span></a></li>
-                <li><a href="/bookmanagement/admin/toUserFeedbackPage" class="icon-9"><span>xxxx</span></a></li>
+                <li><a href="glyfabugg.php?glyusername=<?php echo $glyusername ?>" class="icon-6"><span>发布公告</span></a></li>
+                <li><a href="glyaddstudent.php?glyusername=<?php echo $glyusername ?>" class="icon-7"><span>增加学生</span></a></li>
+         
                 <li><a href="glyshezhi.php?glyusername=<?php echo $glyusername ?>" class="icon-10"><span>设置</span></a></li>
             </ul>
         </div>
@@ -70,22 +69,25 @@ include("connect.php");
 $sql1="select * from student";
 $rs=mysqli_query($con,$sql1);
 while ($s=mysqli_fetch_row($rs)){
-	echo "<tr>";
-	echo "<td>$s[0]  </td>";
-	echo "<td>$s[1]  </td>";
-	echo "<td>$s[2]  </td>";
-	echo "<td>$s[3]  </td>";
-	echo "<td>$s[4]  </td>";
-	echo "<td>$s[5]  </td>";
-	echo "<td>$s[6]  </td>";
-	echo "<td>
-    <a class='btn' href='b'>编辑</a>
-    <a class='btn' href='a'>删除</a>
-    </td>";
-	//echo "<td><a class='btn' href='q'>查看</a></td>";
-    echo "</tr>";
+
+print <<<EOT
+    <tr>
+	<td>$s[0]  </td>
+	<td>$s[1]  </td>
+	<td>$s[2]  </td>
+	<td>$s[3]  </td>
+	<td>$s[4]  </td>
+	<td>$s[5]  </td>
+	<td>$s[6]  </td>
+	<td>
+    <a class='btn' href='glybianjistu.php?glyusername=$glyusername&xuehao=$s[0]&stuname=$s[1]&stuxb=$s[2]&stuphone=$s[4]&stubirth=$s[3]&department=$s[5]&professional=$s[6]'>编辑</a>
+    <a class='btn' href='glystudelete.php?delectstu=$s[0]&glyusername=$glyusername'>删除</a>
+    </td>
+    </tr>
+
+EOT;
 }
-//echo $glyusername;
+
 ?>    			 
                 </tbody>
             </table>

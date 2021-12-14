@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>学生端首页</title>
+    <title>学生公告</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/inner.css">
     <!--    <link rel="stylesheet" href="iconfont.css">-->
@@ -41,12 +41,24 @@
                 <li><a href="stuspjilu.php?xuehao=<?php echo $xuehao; ?>" class="icon-3"><span>审批记录</span></a></li>
                 <li><a href="stugonggao.php?xuehao=<?php echo $xuehao; ?>" class="icon-4"><span>公告</span></a></li>
                 <li><a href="stuxiugai.php?xuehao=<?php echo $xuehao; ?>" class="icon-5"><span>修改个人信息</span></a></li>
+
                 <li><a href="stushezhi.php?xuehao=<?php echo $xuehao; ?>" class="icon-10"><span>设置</span></a></li>
             </ul>
         </div>
         <div class="right bg">
 
-            <p>亲爱的<?php echo $xuehao;  ?>，欢迎来到高校疫情外出管理系统界面--学生端</p>
+            <p align="center" class="gonggao">公告</p>
+            <p>
+                <?Php
+                include("connect.php");
+                $sql1 = "select * from gonggao";
+                $rs = mysqli_query($con, $sql1);
+                while ($s = mysqli_fetch_row($rs)) {
+
+                    echo   $s[1];
+                }
+                ?>
+            </p>
         </div>
     </div>
 </body>
